@@ -1,0 +1,7 @@
+./nes-worker/nesWorker \
+  --configPath=/home/mariana/nebulaQueryAPI/config/worker.yaml \
+  --localWorkerHost=192.168.0.153 \
+  --coordinatorHost=192.168.0.238 \
+  --coordinatorPort=4000 \
+  --rpcPort=4001 \
+  --dataPort=4002
