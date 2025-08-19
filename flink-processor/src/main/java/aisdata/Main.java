@@ -63,14 +63,14 @@ public class Main {
             //STBox stbx = new STBox("SRID=4326;STBOX XT(((3.3615, 53.964367),(16.505853, 59.24544)),[2011-01-03 00:00:00,2011-01-03 00:00:21])");
 
             Properties properties = new Properties();
-            properties.setProperty("bootstrap.servers", "kafka:9092");
+            properties.setProperty("bootstrap.servers", "kafka:29092");
             properties.setProperty("group.id", "flink_consumer");
             properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
             properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
             properties.setProperty("auto.offset.reset", "earliest");
 
             KafkaSource<String> kafkaSource = KafkaSource.<String>builder()
-                .setBootstrapServers("kafka:9092")
+                .setBootstrapServers("kafka:29092")
                 .setGroupId("flink_consumer")
                 .setTopics("aisdata")
                 .setStartingOffsets(OffsetsInitializer.earliest())

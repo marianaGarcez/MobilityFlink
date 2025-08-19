@@ -41,14 +41,14 @@ JMEOS (JMEOS jar file is already include in flink-processor/jar. To install a ne
 We should create a docker image for Kafka, Flink, and MobilityDB. To do this, we go to each directory and create each image. Finally, we go to the main directory and compose the docker container.
 
 cd postgres <br />
-docker build -t postgres6 . <br />
+docker build -t postgres . <br />
 cd .. <br />
 cd kafka-producer <br />
-docker build -t kafka-producer6 . <br />
+docker build -t kafka-producer . <br />
 cd .. <br />
 cd flink-processor <br />
 mvn clean package  <br />
-docker build -t flink-processor6 . <br />
+docker build -t flink-processor . <br />
 cd .. <br />
 docker-compose up -d <br />
 

@@ -4,7 +4,7 @@ import pandas as pd
 
 
 
-kafka_nodes = "kafka:9092"
+kafka_nodes = "kafka:29092"
 myTopic = "aisdata"
 
 def gen_data():
